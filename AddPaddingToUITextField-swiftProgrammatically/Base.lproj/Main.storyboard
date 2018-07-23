@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,62 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AddPaddingToUITextField_swiftProgrammatically" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96h-i2-Bed">
+                                <rect key="frame" x="24" y="120" width="327" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h6C-Ol-kwq"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NcS-mG-kdI">
+                                <rect key="frame" x="24" y="185" width="327" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xOu-Zc-W7M"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w2q-ce-zAk" customClass="PaddingTextField" customModule="AddPaddingToUITextField_swiftProgrammatically" customModuleProvider="target">
+                                <rect key="frame" x="24" y="250" width="327" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QQ2-cm-VoM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BCq-Dl-bjn" customClass="PaddingTextField" customModule="AddPaddingToUITextField_swiftProgrammatically" customModuleProvider="target">
+                                <rect key="frame" x="24" y="315" width="327" height="50"/>
+                                <color key="backgroundColor" red="0.96337508309999997" green="0.97504181680000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97757536170000003" green="0.78956228490000002" blue="0.093355529009999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BCq-Dl-bjn" firstAttribute="height" secondItem="w2q-ce-zAk" secondAttribute="height" id="242-Fz-Ba8"/>
+                            <constraint firstItem="BCq-Dl-bjn" firstAttribute="trailing" secondItem="w2q-ce-zAk" secondAttribute="trailing" id="2ba-dQ-kU5"/>
+                            <constraint firstItem="BCq-Dl-bjn" firstAttribute="leading" secondItem="w2q-ce-zAk" secondAttribute="leading" id="2zC-Ti-oWA"/>
+                            <constraint firstItem="NcS-mG-kdI" firstAttribute="trailing" secondItem="96h-i2-Bed" secondAttribute="trailing" id="5Le-4f-kcT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="96h-i2-Bed" secondAttribute="trailing" constant="24" id="7f0-j2-keB"/>
+                            <constraint firstItem="BCq-Dl-bjn" firstAttribute="top" secondItem="w2q-ce-zAk" secondAttribute="bottom" constant="15" id="Q7O-AR-yVR"/>
+                            <constraint firstItem="NcS-mG-kdI" firstAttribute="top" secondItem="96h-i2-Bed" secondAttribute="bottom" constant="15" id="Vvq-de-b3h"/>
+                            <constraint firstItem="w2q-ce-zAk" firstAttribute="trailing" secondItem="NcS-mG-kdI" secondAttribute="trailing" id="cNV-c6-BOB"/>
+                            <constraint firstItem="w2q-ce-zAk" firstAttribute="leading" secondItem="NcS-mG-kdI" secondAttribute="leading" id="dxa-i5-sr5"/>
+                            <constraint firstItem="w2q-ce-zAk" firstAttribute="top" secondItem="NcS-mG-kdI" secondAttribute="bottom" constant="15" id="gcf-WE-9rr"/>
+                            <constraint firstItem="96h-i2-Bed" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="p9V-Yw-DfD"/>
+                            <constraint firstItem="NcS-mG-kdI" firstAttribute="leading" secondItem="96h-i2-Bed" secondAttribute="leading" id="uk9-XR-AcV"/>
+                            <constraint firstItem="96h-i2-Bed" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="vAw-Di-hUT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
